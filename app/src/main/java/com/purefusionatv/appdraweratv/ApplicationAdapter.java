@@ -62,7 +62,8 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
         if (null == view) {
             LayoutInflater layoutInflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.grid_item, null);
+            view = layoutInflater.inflate(R.layout.grid_item,
+                    null);
         }
 
         ApplicationInfo data = appsList.get(position);
