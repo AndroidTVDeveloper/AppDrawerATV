@@ -70,7 +70,7 @@ public class AppDrawerActivity extends Activity {
     }
 
     private List<ApplicationInfo> checkForLaunchIntent(List<ApplicationInfo> list) {
-        ArrayList<ApplicationInfo> applist = new ArrayList<ApplicationInfo>();
+        ArrayList<ApplicationInfo> applist = new ArrayList<>();
         for (ApplicationInfo info : list) {
             try {
                 if (null != packageManager.getLaunchIntentForPackage(info.packageName)) {
