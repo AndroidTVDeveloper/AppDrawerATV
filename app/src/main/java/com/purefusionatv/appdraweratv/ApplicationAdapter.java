@@ -30,7 +30,7 @@ import android.widget.TextView;
 import java.util.List;
 
 public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
-    private List<ApplicationInfo> appsList = null;
+    private List<ApplicationInfo> appsList;
     private Context context;
     private PackageManager packageManager;
 
