@@ -24,6 +24,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
+        android:background="@drawable/lb_background"
         android:textStyle="bold"
         android:textSize="18sp"
         android:paddingTop="18dp"
