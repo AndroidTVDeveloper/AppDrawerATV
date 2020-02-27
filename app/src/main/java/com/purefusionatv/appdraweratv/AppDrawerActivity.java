@@ -59,9 +59,6 @@ public class AppDrawerActivity extends Activity {
                 if (null != intent) {
                     startActivity(intent);
                 }
-            } catch (ActivityNotFoundException e) {
-                Toast.makeText(AppDrawerActivity.this, e.getMessage(),
-                        Toast.LENGTH_LONG).show();
             } catch (Exception e) {
                 Toast.makeText(AppDrawerActivity.this, e.getMessage(),
                         Toast.LENGTH_LONG).show();
