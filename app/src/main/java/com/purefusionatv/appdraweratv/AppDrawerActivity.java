@@ -50,24 +50,21 @@ public class AppDrawerActivity extends Activity {
 
         grid = (GridView)findViewById(R.id.grid);
         grid.setAdapter(listadaptor);
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ApplicationInfo app = applist.get(position);
-                try {
-                    Intent intent = packageManager
-                            .getLaunchIntentForPackage(app.packageName);
+        grid.setOnItemClickListener((parent, view, position, id) -> {
+            ApplicationInfo app = applist.get(position);
+            try {
+                Intent intent = packageManager
+                        .getLaunchIntentForPackage(app.packageName);
 
-                    if (null != intent) {
-                        startActivity(intent);
-                    }
-                } catch (ActivityNotFoundException e) {
-                    Toast.makeText(AppDrawerActivity.this, e.getMessage(),
-                            Toast.LENGTH_LONG).show();
-                } catch (Exception e) {
-                    Toast.makeText(AppDrawerActivity.this, e.getMessage(),
-                            Toast.LENGTH_LONG).show();
+                if (null != intent) {
+                    startActivity(intent);
                 }
+            } catch (ActivityNotFoundException e) {
+                Toast.makeText(AppDrawerActivity.this, e.getMessage(),
+                        Toast.LENGTH_LONG).show();
+            } catch (Exception e) {
+                Toast.makeText(AppDrawerActivity.this, e.getMessage(),
+                        Toast.LENGTH_LONG).show();
             }
         });
     }
