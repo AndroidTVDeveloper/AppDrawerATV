@@ -17,7 +17,6 @@
 package com.purefusionatv.appdraweratv;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -25,6 +24,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.GridView;
 import android.widget.Toast;
+
+import com.lmntrx.android.library.livin.missme.ProgressDialog;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -99,9 +100,10 @@ public class AppDrawerActivity extends Activity {
         }
 
         @Override
-        protected void onPreExecute() {
-            progress = ProgressDialog.show(AppDrawerActivity.this, null,
-                    "Loading application info...");
+        public void onPreExecute() {
+            ProgressDialog progress = new com.lmntrx.android.library.livin.missme.ProgressDialog(AppDrawerActivity.this);
+            progress.setMessage("Loading application info...");
+            progress.show();
             super.onPreExecute();
         }
 
