@@ -92,11 +92,6 @@ public class AppDrawerActivity extends Activity {
         }
 
         @Override
-        protected void onCancelled() {
-            super.onCancelled();
-        }
-
-        @Override
         protected void onPostExecute(Void result) {
             grid.setAdapter(listadaptor);
             progress.dismiss();
