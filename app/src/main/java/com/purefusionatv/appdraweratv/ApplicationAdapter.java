@@ -29,9 +29,9 @@ import android.widget.TextView;
 import java.util.List;
 
 public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
-    private List<ApplicationInfo> appsList;
-    private Context context;
-    private PackageManager packageManager;
+    private final List<ApplicationInfo> appsList;
+    private final Context context;
+    private final PackageManager packageManager;
 
     public ApplicationAdapter(Context context, int textViewResourceId,
             List<ApplicationInfo> appsList) {
