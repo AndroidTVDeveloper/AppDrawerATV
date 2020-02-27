@@ -79,7 +79,7 @@ public class AppDrawerActivity extends Activity {
     }
 
     private class LoadApplications extends AsyncTask<Void, Void, Void> {
-        private final ProgressDialog progress = null;
+        private ProgressDialog progress = null;
 
         @Override
         protected Void doInBackground(Void... params) {
