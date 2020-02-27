@@ -16,6 +16,7 @@
 
 package com.purefusionatv.appdraweratv;
 
+import android.annotation.NonNull;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -56,8 +57,9 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
         return position;
     }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         View view = convertView;
         if (null == view) {
             LayoutInflater layoutInflater = (LayoutInflater) context
