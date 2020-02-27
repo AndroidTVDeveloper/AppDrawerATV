@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:paddingTop="18dp"
         android:paddingBottom="6dp"
         android:gravity="center"/>
