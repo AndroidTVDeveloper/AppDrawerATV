@@ -16,7 +16,8 @@
         android:banner="@drawable/ic_allapps"
         android:icon="@drawable/ic_allapps"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Leanback">
+        android:theme="@style/Theme.Leanback"
+        android:fullBackupContent="@xml/backup_descriptor">
         <activity
             android:name="com.purefusionatv.appdraweratv.AppDrawerActivity"
             android:label="@string/app_name" >
